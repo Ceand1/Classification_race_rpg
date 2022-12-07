@@ -33,7 +33,7 @@ def read_image(file_path):
 
 
 def test_single_image(path):
-    races = ['cyclops', 'dragonborn', 'elf', 'human', 'orc', 'tieflings']
+    races = ['dragonborn', 'elf', 'human', 'orc', 'tieflings']
     images = read_image(path)
     time.sleep(.5)
     bt_prediction = vgg16.predict(images)  
@@ -42,6 +42,6 @@ def test_single_image(path):
         print("ID: {}, Label: {} {}%".format(idx, race, round(x*100,2) ))
 
 
-path = 'database/test/tieflings/tumblr_bac1a7cf029c0a449c2a500034e908f8_a7a74da3_500.jpg'
+path = 'database/validation/tieflings/stjfjXt.jpeg'
 
 test_single_image(path)
